@@ -1,21 +1,16 @@
-// index.js - purpose and description here
-// Author: Your Name
-// Date:
+// GAME NAME
+// index.js - Pseudocode for GAME NAME
+// Author: Louis Loduha
+// Date: 4/21/25
 
-// Constants
+// Create values for rock, paper and scissors
+// Create functions for rock, paper and scissors
+  // This means, rock>scissors, scissors>paper, paper>rock
+  // Same = same is a tie
+// Make 2 player system
+  // Each player can select 1 of the 3 values
+  // They go head to head and the functions decide the result, (win, lose, tie)
+  // Ask both players to play again
+  // Repeat if yes
+// Quit game if either player says no to playing again
 
-// Functions
-
-// this is an example function and this comment tells what it doees and what parameters are passed to it.
-function myFunction(param1, param2) {
-  // some code here
-  // return results;
-}
-
-function main() {
-  console.log("Main function started.");
-  // the code that makes everything happen
-}
-
-// let's get this party started
-main();
