@@ -9,7 +9,7 @@ body {
 
 /* we can have rules apply to multiple elements at the same time with commas */
 h1,h2,h3,p {
-  font-family: fantasy;
+  font-family: impact;
 }
 
 /* and we can have rules that overlap other rules, both take effect */
@@ -36,5 +36,5 @@ h1 {
 }
 
 #links {
-  font-family: fantasy;
+  font-family: impact;
 }
