@@ -4,7 +4,7 @@
 
 // function that takes a users name and sorts the letters of it
 function sortName() {
-    var userName = window.prompt("Please enter your name")
+    var userName = window.prompt("Please enter your name");
     console.log("userName =", userName);
     // split string to an array
     var nameArray = userName.split('');
@@ -21,4 +21,4 @@ function sortName() {
 
 // output
 document.writeln("Here's your new name: ", 
-    sortUsername(), "</br>");
+    sortName(), "</br>");
