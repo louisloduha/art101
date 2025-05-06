@@ -1,4 +1,6 @@
-// index.js - Lab 7 JS
+// index.js - Lab 8 JavaScript
 // Author: Louis Loduha
-// Date: 5/4/25
+// Date: 5/8/25
+
+// start code here
 
