@@ -1,24 +1,22 @@
 // index.js - Lab 11 JS
 // Author: Louis Loduha
-// Date: 5/4/25
+// Date: 5/19/25
 
-// function that takes a users name and sorts the letters of it
-function sortName() {
-    var userName = window.prompt("Please enter your name");
-    console.log("userName =", userName);
-    // split string to an array
-    var nameArray = userName.split('');
-    console.log("nameArray =", nameArray);
-    // sort array
-    var nameArraySort = nameArray.sort();
-    console.log("nameArraySort =", nameArraySort);
-    // revert back
-    var nameSorted = nameArraySort.join('');
-    console.log("nameSorted =", nameSorted);
-
-    return nameSorted;
+// Sorts the characters of a string in alphabetical order.
+function sortString(inputString) {
+  // We have to convert our string to an array and back again to sort it
+  return inputString.split('').sort().join('');
 }
 
-// output
-document.writeln("Here's your new name: ", 
-    sortName(), "</br>");
+// click listener for button
+$("#submit").click(function(){
+});
+
+// get value of input field
+const userName = $("#user-name").val();
+
+// now let's sort it
+userNameSorted = sortString(userName);
+
+// append a new div to our output div
+$("#output").html('<div class="text"><p>' + userNameSorted + '</p></div>');

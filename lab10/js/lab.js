@@ -1,6 +1,6 @@
 // index.js - Lab 10 JS
 // Author: Louis Loduha
-// Date: 5/4/25
+// Date: 5/15/25
 
 //fake dialogue
 function generateRandomText() {
@@ -8,19 +8,19 @@ function generateRandomText() {
   const min = 3;
   const max = 150;
   const randLen = Math.floor(Math.random() * (max - min + 1)) + min;
-  // Get a random starting index and adjust to nearest whitespace boundary
+  // get a random starting index and adjust to nearest whitespace boundary
   let randStart = Math.floor(Math.random() * (text.length - randLen + 1));
   while (randStart > 0 && text[randStart - 1] !== ' ') {
     randStart--;
   }
-  // Set the end index and adjust to nearest whitespace boundary
+  // set the end index and adjust to nearest whitespace boundary
   let endIdx = randStart + randLen;
   while (endIdx < text.length && text[endIdx] !== ' ') {
     endIdx++;
   }
-  // Generate the random text, breaking at the nearest whitespace boundaries
+  // generate the random text, breaking at the nearest whitespace boundaries
   let selectedText = text.slice(randStart, endIdx).trim();
-  // Capitalize the first letter of the selected text
+  // capitalize the first letter of the selected text
   return selectedText.charAt(0).toUpperCase() + selectedText.slice(1);
 }
 
