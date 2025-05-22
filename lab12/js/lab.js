@@ -1,22 +1,32 @@
-// index.js - Lab 11 JS
+// index.js - Lab 12 JS
 // Author: Louis Loduha
-// Date: 5/19/25
+// Date: 5/22/25
 
-// Sorts the characters of a string in alphabetical order.
-function sortString(inputString) {
-  // We have to convert our string to an array and back again to sort it
-  return inputString.split('').sort().join('');
+// sorting function
+function sortingHat(str) {
+  let length = str.length;
+  let mod = length % 4;
+
+  if (mod === 0) {
+    return "Bruh";
+  } else if (mod === 1) {
+    return "Yeet";
+  } else if (mod === 2) {
+    return "Rizz";
+  } else {
+    return "Deez";
+  }
 }
 
-// click listener for button
-$("#submit").click(function(){
+// click listener
+document.getElementById("button").addEventListener("click", function () {
+  let name = document.getElementById("input").value;
+  let house = sortingHat(name);
+
+  let outputEl = document.getElementById("output");
+  let newParagraph = document.createElement("p");
+  newParagraph.textContent = "The Sorting Hat has sorted you into " + house + "!";
+  newParagraph.style.fontWeight = "bold";
+  newParagraph.style.fontSize = "1.2em";
+  outputEl.appendChild(newParagraph);
 });
-
-// get value of input field
-const userName = $("#user-name").val();
-
-// now let's sort it
-userNameSorted = sortString(userName);
-
-// append a new div to our output div
-$("#output").html('<div class="text"><p>' + userNameSorted + '</p></div>');
