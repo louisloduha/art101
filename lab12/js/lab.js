@@ -8,13 +8,13 @@ function sortingHat(str) {
   let mod = length % 4;
 
   if (mod === 0) {
-    return "Bruh";
+    return "the Bruh House";
   } else if (mod === 1) {
-    return "Yeet";
+    return "the Yeet House";
   } else if (mod === 2) {
-    return "Rizz";
+    return "The Rizz House";
   } else {
-    return "Deez";
+    return "the Deez House";
   }
 }
 
