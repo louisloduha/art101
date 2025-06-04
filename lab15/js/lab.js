@@ -1,37 +1,29 @@
-// index.js - Lab 13 JS
+// index.js - Lab 15 JS
 // Author: Louis Loduha
-// Date: 5/26/25
+// Date: 6/2/25
 
-// fizz, buzz, boom function
-function fizzBuzzBoom() {
-  let giantString = "";
 
-  for (let i = 1; i <= 200; i++) {
-    let str = "";
+$("#activate").click(function () {
+    console.log("Button clicked!");
 
-    if (i % 3 === 0) {
-      str += "Fizz";
-    }
-    if (i % 5 === 0) {
-      str += "Buzz";
-    }
-    if (i % 7 === 0) {
-      str += "Boom";
-    }
 
-    
-    if (str === "") {
-      str = i;
-    } else {
-      str = i + " " + str + "!";
-    }
+    $.ajax({
+        url: "https://yesno.wtf/api",
+        type: "GET",
+        dataType: "json",
+        success: function (data) {
+            console.log(data);
 
-    giantString += str + "<br>";
-  }
 
-  // final result
-  $("#output").html(giantString);
-}
+            let html = `<p>Answer: <strong>${data.answer}</strong></p>
+                        <img src="${data.image}" alt="Yes/No image">`;
+            $("#output").html(html);
+        },
 
-// call function
-fizzBuzzBoom();
+        
+        error: function (jqXHR, textStatus, errorThrown) {
+            console.log("Error:", textStatus, errorThrown);
+            $("#output").html("<p>Sorry, an error occurred.</p>");
+        }
+    });
+});
